@@ -7,7 +7,7 @@ namespace AdventOfCode2018.Days
     {
         public void Part1()
         {
-            int numberOfElfs = 465; int lastMarble = 7149800;
+            int numberOfElfs = 465; int lastMarble = 71498;
 
             long max = this.GetMaxScore(this.SlowArrayImplementation(numberOfElfs, lastMarble));
 
