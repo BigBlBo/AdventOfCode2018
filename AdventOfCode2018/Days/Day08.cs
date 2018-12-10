@@ -7,11 +7,11 @@ using System.Text;
 
 namespace AdventOfCode2018.Days
 {
-    class Day8
+    class Day08
     {
         public void Part1()
         {
-            List<string> fileLines = new FileRead().GetLines("../../../Inputs/Day8.txt");
+            List<string> fileLines = new FileRead().GetLines("../../../Inputs/Day08.txt");
             var numbers = fileLines[0].Split(' ').Select(int.Parse).ToList();
             var i = 0;
             TreeNode treeNode = ReadNode(numbers, ref i);
@@ -21,7 +21,7 @@ namespace AdventOfCode2018.Days
 
         public void Part2()
         {
-            List<string> fileLines = new FileRead().GetLines("../../../Inputs/Day8.txt");
+            List<string> fileLines = new FileRead().GetLines("../../../Inputs/Day08.txt");
             var numbers = fileLines[0].Split(' ').Select(int.Parse).ToList();
             var i = 0;
             TreeNode treeNode = ReadNode(numbers, ref i);

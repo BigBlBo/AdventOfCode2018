@@ -67,7 +67,7 @@ namespace AdventOfCode2018.Days
                                     xAxisIncrement++;
                                     if (xAxisIncrement % 6 == 0)
                                     {
-                                        Console.Write("   "); xAxisIncrement = 0;
+                                        Console.Write("   ");
                                     }
                                 }
                             }

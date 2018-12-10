@@ -6,13 +6,13 @@ using System.Text;
 
 namespace AdventOfCode2018.Days
 {
-    class Day3
+    class Day03
     {
         public void Part1()
         {
             IDictionary<int, IDictionary<int, int>> fabric = new Dictionary<int, IDictionary<int, int>>();
 
-            List<FabricPart> fabricParts = new FileRead().GetFabricPart("../../../Inputs/Day3.txt");
+            List<FabricPart> fabricParts = new FileRead().GetFabricPart("../../../Inputs/Day03.txt");
             int count = 0;
             foreach (FabricPart fabricPart in fabricParts)
             {
@@ -55,7 +55,7 @@ namespace AdventOfCode2018.Days
             IDictionary<int, IDictionary<int, int>> fabric = new Dictionary<int, IDictionary<int, int>>();
             HashSet<int> ids = new HashSet<int>();
 
-            List<FabricPart> fabricParts = new FileRead().GetFabricPart("../../../Inputs/Day3.txt");
+            List<FabricPart> fabricParts = new FileRead().GetFabricPart("../../../Inputs/Day03.txt");
 
             foreach (FabricPart fabricPart in fabricParts)
             {

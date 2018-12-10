@@ -6,11 +6,11 @@ using System.Linq;
 
 namespace AdventOfCode2018.Days
 {
-    class Day7
+    class Day07
     {
         public void Part1()
         {
-            List<Step> steps = new FileRead().GetSteps("../../../Inputs/Day7.txt");
+            List<Step> steps = new FileRead().GetSteps("../../../Inputs/Day07.txt");
 
             IDictionary<string, HashSet<string>> points = new Dictionary<string, HashSet<string>>();
             IList<string> stepsSequence = new List<string>();
@@ -72,7 +72,7 @@ namespace AdventOfCode2018.Days
 
         public void Part2()
         {
-            List<Step> steps = new FileRead().GetSteps("../../../Inputs/Day7.txt");
+            List<Step> steps = new FileRead().GetSteps("../../../Inputs/Day07.txt");
 
             IDictionary<string, HashSet<string>> points = new Dictionary<string, HashSet<string>>();
 

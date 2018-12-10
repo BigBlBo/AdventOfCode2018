@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AdventOfCode2018.Days
 {
-    class Day9
+    class Day09
     {
         public void Part1()
         {

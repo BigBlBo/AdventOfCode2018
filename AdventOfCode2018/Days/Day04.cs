@@ -6,11 +6,11 @@ using System.Text;
 
 namespace AdventOfCode2018.Days
 {
-    class Day4
+    class Day04
     {
         public void Part1()
         {
-            List<GuardEvent> GuardEvents = new FileRead().GetGuardEvents("../../../Inputs/Day4.txt");
+            List<GuardEvent> GuardEvents = new FileRead().GetGuardEvents("../../../Inputs/Day04.txt");
             IDictionary<int, IDictionary<int, int>> guardsSleep = new Dictionary<int, IDictionary<int, int>>();
             int state = 0; int guardId = 0;
 
@@ -68,7 +68,7 @@ namespace AdventOfCode2018.Days
 
         public void Part2()
         {
-            List<GuardEvent> GuardEvents = new FileRead().GetGuardEvents("../../../Inputs/Day4.txt");
+            List<GuardEvent> GuardEvents = new FileRead().GetGuardEvents("../../../Inputs/Day04.txt");
             IDictionary<int, IDictionary<int, int>> guardsSleep = new Dictionary<int, IDictionary<int, int>>();
             int state = 0; int guardId = 0;
 

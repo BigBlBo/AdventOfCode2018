@@ -5,11 +5,11 @@ using System.Text;
 
 namespace AdventOfCode2018.Days
 {
-    class Day1
+    class Day01
     {
         public void Part1()
         {
-            IDictionary<int, int> numDic = new FileRead().GetNumDic("../../../Inputs/Day1.txt");
+            IDictionary<int, int> numDic = new FileRead().GetNumDic("../../../Inputs/Day01.txt");
 
             int sum = 0;
             foreach (int key in numDic.Keys)
@@ -22,7 +22,7 @@ namespace AdventOfCode2018.Days
 
         public void Part2()
         {
-            IList<int> numList = new FileRead().GetNumList("../../../Inputs/Day1.txt");
+            IList<int> numList = new FileRead().GetNumList("../../../Inputs/Day01.txt");
 
             int sum = 0;
             HashSet<int> frequency = new HashSet<int> { 0 };

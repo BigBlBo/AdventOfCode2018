@@ -5,11 +5,11 @@ using System.Text;
 
 namespace AdventOfCode2018.Days
 {
-    class Day5
+    class Day05
     {
         public void Part1()
         {
-            List<string> lines = new FileRead().GetLines("../../../Inputs/Day5.txt");
+            List<string> lines = new FileRead().GetLines("../../../Inputs/Day05.txt");
 
             for (int index = 0; index < lines[0].Length - 1; index++)
             {
@@ -28,7 +28,7 @@ namespace AdventOfCode2018.Days
 
         public void Part2()
         {
-            List<string> lines = new FileRead().GetLines("../../../Inputs/Day5.txt");
+            List<string> lines = new FileRead().GetLines("../../../Inputs/Day05.txt");
 
             int minLength = lines[0].Length;
 

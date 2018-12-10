@@ -5,14 +5,14 @@ using System.Text;
 
 namespace AdventOfCode2018.Days
 {
-    class Day2
+    class Day02
     {
         public void Part1()
         {
             int two = 0; int three = 0; int twoInternal = 0; int threeInternal = 0;
             IDictionary<int, int> numDic = new Dictionary<int, int>();
 
-            List<string> fileLines = new FileRead().GetLines("../../../Inputs/Day2.txt");
+            List<string> fileLines = new FileRead().GetLines("../../../Inputs/Day02.txt");
 
             foreach (string line in fileLines)
             {
@@ -54,7 +54,7 @@ namespace AdventOfCode2018.Days
         {
             List<string> results = new List<string>();
             IDictionary<int, HashSet<String>> subStringDic = new Dictionary<int, HashSet<String>>();
-            List<string> fileLines = new FileRead().GetLines("../../../Inputs/Day2.txt");
+            List<string> fileLines = new FileRead().GetLines("../../../Inputs/Day02.txt");
 
             foreach (string line in fileLines)
             {

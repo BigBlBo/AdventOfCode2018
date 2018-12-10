@@ -6,11 +6,11 @@ using System.Text;
 
 namespace AdventOfCode2018.Days
 {
-    class Day6
+    class Day06
     {
         public void Part1()
         {
-            List<Coordinate> coordinates = new FileRead().GetCoordinates("../../../Inputs/Day6.txt");
+            List<Coordinate> coordinates = new FileRead().GetCoordinates("../../../Inputs/Day06.txt");
 
             int maxX = 0; int maxY = 0;
             IDictionary<int, int> dic = new Dictionary<int, int>();
@@ -89,7 +89,7 @@ namespace AdventOfCode2018.Days
 
         public void Part2()
         {
-            List<Coordinate> coordinates = new FileRead().GetCoordinates("../../../Inputs/Day6.txt");
+            List<Coordinate> coordinates = new FileRead().GetCoordinates("../../../Inputs/Day06.txt");
 
             int maxX = 0; int maxY = 0;
             IDictionary<int, int> dic = new Dictionary<int, int>();
