@@ -9,6 +9,34 @@ namespace AdventOfCode2018.Commons
 {
     class FileRead
     {
+        public List<CoordinateWithStep> GetCoordinateWithSteps(string filePath)
+        {
+            List<CoordinateWithStep> coordinateWithSteps = new List<CoordinateWithStep>();
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                string line = null;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    string coordinate = line.Substring(line.IndexOf('<') + 1, line.IndexOf('>') - line.IndexOf('<') - 1);
+                    string steps = line.Substring(line.IndexOf('>') + 1);
+                    steps = steps.Substring(steps.IndexOf('<') + 1, steps.IndexOf('>') - steps.IndexOf('<') - 1);
+                    string[] coordinateArray = coordinate.Split(',');
+                    string[] stepsArray = steps.Split(',');
+
+                    coordinateWithSteps.Add(new CoordinateWithStep
+                    {
+                        PosX = int.Parse(coordinateArray[0]),
+                        PosY = int.Parse(coordinateArray[1]),
+                        StepX = int.Parse(stepsArray[0]),
+                        StepY = int.Parse(stepsArray[1])
+                    });
+                }
+            }
+
+            return coordinateWithSteps;
+        }
+
+
         public List<Step> GetSteps(string filePath)
         {
             List<Step> steps = new List<Step>();
