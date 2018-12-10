@@ -16,7 +16,7 @@ namespace AdventOfCode2018.Days
             var i = 0;
             TreeNode treeNode = ReadNode(numbers, ref i);
 
-            Console.WriteLine("End result of day 8 (part 1) is " + this.Sum(treeNode));
+            Console.WriteLine("End result of day  8 (part 1) is " + this.Sum(treeNode));
         }
 
         public void Part2()
@@ -26,7 +26,7 @@ namespace AdventOfCode2018.Days
             var i = 0;
             TreeNode treeNode = ReadNode(numbers, ref i);
 
-            Console.WriteLine("End result of day 8 (part 2) is " + this.Value(treeNode));
+            Console.WriteLine("End result of day  8 (part 2) is " + this.Value(treeNode));
         }
 
         private static TreeNode ReadNode(List<int> numbers, ref int i)

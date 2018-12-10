@@ -20,6 +20,7 @@ namespace AdventOfCode2018
             Day08 day08 = new Day08(); day08.Part1(); day08.Part2();
             Day09 day09 = new Day09(); day09.Part1(); day09.Part2();
             Day10 day10 = new Day10(); day10.Part1(); day10.Part2();
+            Day11 day11 = new Day11(); day11.Part1(); day11.Part2();
 
             Console.WriteLine(sw.ElapsedMilliseconds);
             Console.ReadLine();

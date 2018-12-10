@@ -84,7 +84,7 @@ namespace AdventOfCode2018.Days
                 }
             }
 
-            Console.WriteLine("End result of day 6 (part 1) is " + maxArea); //3969
+            Console.WriteLine("End result of day  6 (part 1) is " + maxArea); //3969
         }
 
         public void Part2()
@@ -145,7 +145,7 @@ namespace AdventOfCode2018.Days
                 }
             }
 
-            Console.WriteLine("End result of day 6 (part 2) is " + count); //42123
+            Console.WriteLine("End result of day  6 (part 2) is " + count); //42123
         }
     }
 }

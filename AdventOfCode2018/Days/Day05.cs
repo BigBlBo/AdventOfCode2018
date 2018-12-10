@@ -23,7 +23,7 @@ namespace AdventOfCode2018.Days
                 }
             }
 
-            Console.WriteLine("End result of day 5 (part 1) is " + lines[0].Length); // 9462
+            Console.WriteLine("End result of day  5 (part 1) is " + lines[0].Length); // 9462
         }
 
         public void Part2()
@@ -56,7 +56,7 @@ namespace AdventOfCode2018.Days
                 if (line.Length < minLength) { minLength = line.Length; }
             }
 
-            Console.WriteLine("End result of day 5 (part 1) is " + minLength); // 4952
+            Console.WriteLine("End result of day  5 (part 1) is " + minLength); // 4952
         }
     }
 }

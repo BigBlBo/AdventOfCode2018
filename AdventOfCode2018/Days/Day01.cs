@@ -17,7 +17,7 @@ namespace AdventOfCode2018.Days
                 sum = sum + (numDic[key] * key);
             }
 
-            Console.WriteLine("End result of day 1 (part 1) is " + sum);
+            Console.WriteLine("End result of day  1 (part 1) is " + sum);
         }
 
         public void Part2()
@@ -34,7 +34,7 @@ namespace AdventOfCode2018.Days
                     sum = sum + num;
                     if (frequency.Contains(sum))
                     {
-                        Console.WriteLine("End result of day 1 (part 2) is " + sum + " in " + iteration + " iterations.");
+                        Console.WriteLine("End result of day  1 (part 2) is " + sum + " in " + iteration + " iterations.");
                         return;
                     }
                     frequency.Add(sum);

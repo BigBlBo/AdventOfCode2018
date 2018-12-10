@@ -63,7 +63,7 @@ namespace AdventOfCode2018.Days
 
             guardSleepMinutes = guardsSleep[maxId];
 
-            Console.WriteLine("End result of day 4 (part 1) is " + maxId * maxMinId2);
+            Console.WriteLine("End result of day  4 (part 1) is " + maxId * maxMinId2);
         }
 
         public void Part2()
@@ -116,7 +116,7 @@ namespace AdventOfCode2018.Days
             }
 
             guardSleepMinutes = guardsSleep[maxGuardKey];
-            Console.WriteLine("End result of day 4 (part 2) is " + maxGuardKey * maxGuardMinKey);
+            Console.WriteLine("End result of day  4 (part 2) is " + maxGuardKey * maxGuardMinKey);
         }
     }
 }

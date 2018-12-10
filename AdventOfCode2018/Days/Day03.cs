@@ -47,7 +47,7 @@ namespace AdventOfCode2018.Days
                 }
             }
 
-            Console.WriteLine("End result of day 3 (part 1) is " + count); //120408
+            Console.WriteLine("End result of day  3 (part 1) is " + count); //120408
         }
 
         public void Part2()
@@ -92,7 +92,7 @@ namespace AdventOfCode2018.Days
             if (ids.Count != 1) throw new Exception("Error " + ids.Count );
             foreach (int key in ids)
             {
-                Console.WriteLine("End result of day 3 (part 2) is " + key); //1276
+                Console.WriteLine("End result of day  3 (part 2) is " + key); //1276
             }
         }
     }

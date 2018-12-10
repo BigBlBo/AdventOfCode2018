@@ -11,7 +11,7 @@ namespace AdventOfCode2018.Days
 
             long max = this.GetMaxScore(this.SlowArrayImplementation(numberOfElfs, lastMarble));
 
-            Console.WriteLine("End result of day 9 (part 1) is " + max);
+            Console.WriteLine("End result of day  9 (part 1) is " + max);
         }
 
         public void Part2()
@@ -20,7 +20,7 @@ namespace AdventOfCode2018.Days
 
             long max = this.GetMaxScore(this.FastLinkedListImplementation(numberOfElfs, lastMarble));
 
-            Console.WriteLine("End result of day 9 (part 2) is " + max);
+            Console.WriteLine("End result of day  9 (part 2) is " + max);
         }
 
         private IDictionary<int, long> SlowArrayImplementation(int numberOfElfs, int lastMarble)

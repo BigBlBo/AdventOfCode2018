@@ -62,7 +62,7 @@ namespace AdventOfCode2018.Days
                 }
             }
 
-            Console.Write("End result of day 7 (part 1) is ");
+            Console.Write("End result of day  7 (part 1) is ");
             foreach (string step in stepsSequence)
             {
                 Console.Write(step); //LFMNJRTQVZCHIABKPXYEUGWDSO 
@@ -151,7 +151,7 @@ namespace AdventOfCode2018.Days
                 stepsInProgress[nextFreeSlot] = null;
             }
 
-            Console.WriteLine("End result of day 7 (part 1) is " + timeSlots.Max());//1180 
+            Console.WriteLine("End result of day  7 (part 1) is " + timeSlots.Max());//1180 
         }
     }
 }

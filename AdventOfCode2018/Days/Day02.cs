@@ -47,7 +47,7 @@ namespace AdventOfCode2018.Days
                 twoInternal = 0; threeInternal = 0; numDic.Clear();
             }
 
-            Console.WriteLine("End result of day 2 (part 1) is " + two * three); //6642
+            Console.WriteLine("End result of day  2 (part 1) is " + two * three); //6642
         }
 
         public void Part2()
@@ -80,7 +80,7 @@ namespace AdventOfCode2018.Days
                 }
             }
 
-            Console.WriteLine("End result of day 2 (part 2) is " + results[0]); //cvqlbidheyujgtrswxmckqnap
+            Console.WriteLine("End result of day  2 (part 2) is " + results[0]); //cvqlbidheyujgtrswxmckqnap
         }
     }
 }

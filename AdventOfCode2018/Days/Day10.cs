@@ -23,14 +23,15 @@ namespace AdventOfCode2018.Days
         {
             List<CoordinateWithStep> coordinateWithSteps = new FileRead().GetCoordinateWithSteps("../../../Inputs/Day10.txt");
 
-            int diffy = int.MaxValue; int count = 0;
             IDictionary<int, IDictionary<int, bool>> pointsPrevStep = null;
-            int maxxPrevStep = 0; int maxyPrevStep = 0; int minxPrevStep = 0; int minyPrevStep = 0;
+            int maxxPrevStep = 0; int minxPrevStep = 0;
+            int minyPrevStep = 0; int maxyPrevStep = 0;
+            int countSeconds = 0;
 
             while (true)
             {
                 IDictionary<int, IDictionary<int, bool>> points = new Dictionary<int, IDictionary<int, bool>>();
-                int maxx = int.MinValue; int maxy = int.MinValue; int minx = int.MaxValue; int miny = int.MaxValue;
+                int maxx = int.MinValue; int minx = int.MaxValue; int miny = int.MaxValue; int maxy = int.MinValue;
                 foreach (CoordinateWithStep coordinateWithStep in coordinateWithSteps)
                 {
                     coordinateWithStep.PosX = coordinateWithStep.PosX + coordinateWithStep.StepX;
@@ -44,7 +45,7 @@ namespace AdventOfCode2018.Days
                     if (!points[coordinateWithStep.PosX].ContainsKey(coordinateWithStep.PosY)) { points[coordinateWithStep.PosX][coordinateWithStep.PosY] = true; }
                 }
 
-                if (diffy < (maxy - miny))
+                if ((maxyPrevStep - minyPrevStep) < (maxy - miny) && countSeconds > 0)
                 {
                     if (printMessage)
                     {
@@ -78,13 +79,13 @@ namespace AdventOfCode2018.Days
                     break;
                 }
 
-                count++;
-                diffy = maxy - miny;
+                countSeconds++;
                 pointsPrevStep = points;
-                maxxPrevStep = maxx; minxPrevStep = minx; maxyPrevStep = maxy; minyPrevStep = miny;
+                maxxPrevStep = maxx; minxPrevStep = minx;
+                maxyPrevStep = maxy; minyPrevStep = miny;
             }
 
-            return count;
+            return countSeconds;
         }
     }
 }
