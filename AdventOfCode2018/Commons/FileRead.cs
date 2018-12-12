@@ -9,6 +9,28 @@ namespace AdventOfCode2018.Commons
 {
     class FileRead
     {
+        public List<PlantGrowPattern> GetPlantGrowPatterns(string filePath)
+        {
+            List<PlantGrowPattern> plantGrowPatterns = new List<PlantGrowPattern>();
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                string line = null;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    string patternToGrow = line.Substring(0, line.IndexOf('=')).Trim();
+                    string growResult = line.Substring(line.IndexOf('>') + 1).Trim();
+
+                    plantGrowPatterns.Add(new PlantGrowPattern
+                    {
+                        PatternToGrow = patternToGrow,
+                        GrowResult = growResult
+                    });
+                }
+            }
+
+            return plantGrowPatterns;
+        }
+
         public List<CoordinateWithStep> GetCoordinateWithSteps(string filePath)
         {
             List<CoordinateWithStep> coordinateWithSteps = new List<CoordinateWithStep>();
