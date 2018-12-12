@@ -22,8 +22,8 @@ namespace AdventOfCode2018.Commons
 
                     plantGrowPatterns.Add(new PlantGrowPattern
                     {
-                        PatternToGrow = patternToGrow,
-                        GrowResult = growResult
+                        PatternToGrow = patternToGrow.ToCharArray(),
+                        GrowResult = growResult.ToCharArray()[0]
                     });
                 }
             }

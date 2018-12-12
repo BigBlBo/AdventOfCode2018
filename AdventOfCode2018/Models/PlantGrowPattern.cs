@@ -2,7 +2,7 @@
 {
     class PlantGrowPattern
     {
-        public string PatternToGrow;
-        public string GrowResult;
+        public char [] PatternToGrow;
+        public char GrowResult;
     }
 }

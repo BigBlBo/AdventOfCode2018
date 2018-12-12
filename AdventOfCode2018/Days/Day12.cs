@@ -35,22 +35,24 @@ namespace AdventOfCode2018.Days
 
                 foreach (PlantGrowPattern plantGrowPattern in plantGrowPatterns)
                 {
-                    char[] charArrayPattern = plantGrowPattern.PatternToGrow.ToCharArray();
-                    for (int curentGenerationIndex = 0; curentGenerationIndex < charArrayCurentGeneration.Length; curentGenerationIndex++)
+                    if (plantGrowPattern.GrowResult == '#')
                     {
-                        bool match = true;
-                        for (int patternIndex = 0; patternIndex < charArrayPattern.Length; patternIndex++)
+                        for (int curentGenerationIndex = 0; curentGenerationIndex < charArrayCurentGeneration.Length; curentGenerationIndex++)
                         {
-                            if (curentGenerationIndex + patternIndex > charArrayCurentGeneration.Length - 1 || 
-                                    charArrayCurentGeneration[curentGenerationIndex + patternIndex] != charArrayPattern[patternIndex])
+                            bool match = true;
+                            for (int patternIndex = 0; patternIndex < plantGrowPattern.PatternToGrow.Length; patternIndex++)
                             {
-                                match = false; break;
+                                if (curentGenerationIndex + patternIndex > charArrayCurentGeneration.Length - 1 ||
+                                        charArrayCurentGeneration[curentGenerationIndex + patternIndex] != plantGrowPattern.PatternToGrow[patternIndex])
+                                {
+                                    match = false; break;
+                                }
                             }
-                        }
 
-                        if (match)
-                        {
-                            charArrayNewGeneration[curentGenerationIndex + 2] = plantGrowPattern.GrowResult.ToCharArray()[0];
+                            if (match)
+                            {
+                                charArrayNewGeneration[curentGenerationIndex + 2] = plantGrowPattern.GrowResult;
+                            }
                         }
                     }
                 }
