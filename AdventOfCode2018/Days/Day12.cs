@@ -19,17 +19,19 @@ namespace AdventOfCode2018.Days
 
         private long GrowPlants(long generations, bool stopWhenRepeated)
         {
-            string input = "#.#..#..###.###.#..###.#####...########.#...#####...##.#....#.####.#.#..#..#.#..###...#..#.#....##.";
+            string curentGeneration = "#.#..#..###.###.#..###.#####...########.#...#####...##.#....#.####.#.#..#..#.#..###...#..#.#....##.";
             List<PlantGrowPattern> plantGrowPatterns = new FileRead().GetPlantGrowPatterns("../../../Inputs/Day12.txt");
             string addToNewGeneration = ".....";
             long sumPrev = 0;
-            long sum = CountPlantPots(input, 0);
+            long sum = CountPlantPots(curentGeneration.ToCharArray(), 0);
             long prevNowDiff = 0;
 
             for (long index = 1; index <= generations; index++)
             { 
-                char[] charArrayNewGeneration = new String('.', input.Length + 10).ToCharArray();
-                char[] charArrayCurentGeneration = input.Insert(input.Length-1, addToNewGeneration).Insert(0, addToNewGeneration).ToCharArray();
+                char[] charArrayNewGeneration = new String('.', curentGeneration.Length + 10).ToCharArray();
+                char[] charArrayCurentGeneration = curentGeneration.
+                        Insert(curentGeneration.Length-1, addToNewGeneration).
+                            Insert(0, addToNewGeneration).ToCharArray();
 
                 foreach (PlantGrowPattern plantGrowPattern in plantGrowPatterns)
                 {
@@ -53,8 +55,8 @@ namespace AdventOfCode2018.Days
                     }
                 }
 
-                input = new string(charArrayNewGeneration);
-                sum = CountPlantPots(input, index);
+                sum = CountPlantPots(charArrayNewGeneration, index);
+                curentGeneration = new string(charArrayNewGeneration);
                 if (stopWhenRepeated && prevNowDiff == (sum - sumPrev))
                 {
                     return ((generations - index) * prevNowDiff) + sum;
@@ -67,16 +69,15 @@ namespace AdventOfCode2018.Days
             return sum;
         }
 
-        private long CountPlantPots(string input, long generationInProgress)
+        private long CountPlantPots(char[] curentGeneration, long generationInProgress)
         {
-            long untilZero = generationInProgress * 5;
-            char[] charArray = input.ToCharArray();
             long sum = 0;
-            for (int index = 0; index < input.Length; index++)
+            long untilZeroPosition = generationInProgress * 5;
+            for (int index = 0; index < curentGeneration.Length; index++)
             {
-                if (charArray[index] == '#')
+                if (curentGeneration[index] == '#')
                 {
-                    sum += index - untilZero;
+                    sum += index - untilZeroPosition;
                 }
             }
 
