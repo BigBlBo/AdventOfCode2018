@@ -9,7 +9,7 @@ namespace AdventOfCode2018
         static void Main(string[] args)
         {
             Stopwatch sw = Stopwatch.StartNew();
-            
+            /*
             Day01 day01 = new Day01(); day01.Part1(); day01.Part2();
             Day02 day02 = new Day02(); day02.Part1(); day02.Part2();
             Day03 day03 = new Day03(); day03.Part1(); day03.Part2();
@@ -23,6 +23,8 @@ namespace AdventOfCode2018
             //Day11 day11 = new Day11(); day11.Part1(); day11.Part2();
             Day12 day12 = new Day12(); day12.Part1(); day12.Part2();
             Day13 day13 = new Day13(); day13.Part1(); day13.Part2();
+            */
+            Day14 day14 = new Day14(); day14.Part1(); day14.Part2();
 
             Console.WriteLine(sw.ElapsedMilliseconds);
             Console.ReadLine();
