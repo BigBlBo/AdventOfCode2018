@@ -27,6 +27,8 @@ namespace AdventOfCode2018
             
             Day15 day15 = new Day15(); day15.Part1(); day15.Part2();
             Day16 day16 = new Day16(); day16.Part1(); day16.Part2();
+            Day17 day17 = new Day17(); day17.Part1(); day17.Part2();
+
             Console.WriteLine(sw.ElapsedMilliseconds);
             Console.ReadLine();
         }

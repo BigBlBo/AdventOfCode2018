@@ -403,27 +403,5 @@ namespace AdventOfCode2018.Days
             else
                 return opCodeOperation.After[opCodeOperation.Operation[3]] == 0 ? 1 : 0;
         }
-
-
-
-
-
-        private int [] InitResult(OpCodeOperation opCodeOperation)
-        {
-            int[] result = { opCodeOperation.After[0], opCodeOperation.After[1], opCodeOperation.After[2], opCodeOperation.After[3] };
-            return result;
-        }
-
-        private bool CompareResult(OpCodeOperation opCodeOperation, int[] result)
-        {
-            for (int index = 0; index < 4; index++)
-            {
-                if (opCodeOperation.After[index] != result[index])
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
     }
 }
