@@ -49,8 +49,9 @@ namespace AdventOfCode2018.Days
             List<int[]> programLines = new FileRead().GetProgramLines("../../../Inputs/Day16_2.txt");
             IDictionary<int, HashSet<int>> matches = new Dictionary<int, HashSet<int>>();
             IDictionary<int, Action< int[], int[]>> functions = new Dictionary<int, Action<int[], int[]>>();
+            int instNum = 16;
 
-            for(int index = 1; index <= 16; index++)
+            for (int index = 1; index <= instNum; index++)
             {
                 matches[index] = new HashSet<int>();
             }
@@ -78,27 +79,27 @@ namespace AdventOfCode2018.Days
             while (true)
             {
                 int func = -1;
-                for (int index = 1; index <= 16; index++)
+                for (int index = 1; index <= instNum; index++)
                 {
                     if (matches[index].Count == 1)
                     {
                         func = matches[index].ToList()[0];
-                        if (index == 1) { functions[func] = Addr; }
-                        if (index == 2) { functions[func] = Addi; }
-                        if (index == 3) { functions[func] = Mulr ; }
-                        if (index == 4) { functions[func] = Muli; }
-                        if (index == 5) { functions[func] = Barr; }
-                        if (index == 6) { functions[func] = Bari; }
-                        if (index == 7) { functions[func] = Borr; }
-                        if (index == 8) { functions[func] = Bori; }
-                        if (index == 9) { functions[func] = Setr; }
-                        if (index == 10) { functions[func] = Seti; }
-                        if (index == 11) { functions[func] = Gtir; }
-                        if (index == 12) { functions[func] = Gtri; }
-                        if (index == 13) { functions[func] = Gtrr; }
-                        if (index == 14) { functions[func] = Eqir; }
-                        if (index == 15) { functions[func] = Eqri; }
-                        if (index == 16) { functions[func] = Eqrr; }
+                        if (index == 1) { functions[func] = Addr; break; }
+                        else if (index == 2) { functions[func] = Addi; break; }
+                        else if (index == 3) { functions[func] = Mulr; break; }
+                        else if (index == 4) { functions[func] = Muli; break; }
+                        else if (index == 5) { functions[func] = Barr; break; }
+                        else if (index == 6) { functions[func] = Bari; break; }
+                        else if (index == 7) { functions[func] = Borr; break; }
+                        else if (index == 8) { functions[func] = Bori; break; }
+                        else if (index == 9) { functions[func] = Setr; break; }
+                        else if (index == 10) { functions[func] = Seti; break; }
+                        else if (index == 11) { functions[func] = Gtir; break; }
+                        else if (index == 12) { functions[func] = Gtri; break; }
+                        else if (index == 13) { functions[func] = Gtrr; break; }
+                        else if (index == 14) { functions[func] = Eqir; break; }
+                        else if (index == 15) { functions[func] = Eqri; break; }
+                        else if (index == 16) { functions[func] = Eqrr; break; }
                     }
                 }
 
@@ -116,7 +117,7 @@ namespace AdventOfCode2018.Days
                 functions[line[0]](registers, line);
             }
 
-            Console.WriteLine("End result of day 16 (part 2) is " + registers[0]);
+            Console.WriteLine("End result of day 16 (part 2) is " + registers[0]); //472
         }
 
         private void Addr(int[] registers, int[] operation)
