@@ -24,7 +24,7 @@ namespace AdventOfCode2018.Days
             Console.WriteLine("End result of day 14 (part 2) is " + (recipes.Count - input.ToString().Length));  //20262967
         }
 
-        public List<int> GenerateRecipes(int input, int part)
+        private List<int> GenerateRecipes(int input, int part)
         {
             int inputLength = input.ToString().Length;
             int firstElfPos = 0; int secondElfPos = 1;

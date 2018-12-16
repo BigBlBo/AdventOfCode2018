@@ -9,6 +9,56 @@ namespace AdventOfCode2018.Commons
 {
     class FileRead
     {
+        public List<int []> GetProgramLines(string filePath)
+        {
+            List<int[]> programLines = new List<int[]>();
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                string line = null;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    int[] operation = new int[4];
+                    string [] codes = line.Split(' ');
+                    for (int index = 0; index < 4; index++) { operation[index] = int.Parse(codes[index]); }
+
+                    programLines.Add(operation);
+                }
+            }
+
+            return programLines;
+        }
+
+        public List<OpCodeOperation> GetOpCodeOperations(string filePath)
+        {
+            List<OpCodeOperation> opCodeOperations = new List<OpCodeOperation>();
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                string line = null;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    int[] before = new int[4];
+                    int[] operation = new int[4];
+                    int[] after = new int[4];
+                    if(line.ToLower().StartsWith("before"))
+                    {
+                        string [] codes = line.Substring(line.IndexOf('[') + 1, line.IndexOf(']') - line.IndexOf('[') - 1).Split(',');
+                        for (int index = 0; index < 4; index++) { before[index] = int.Parse(codes[index]); }
+                        line = reader.ReadLine();
+                        codes = line.Split(' ');
+                        for (int index = 0; index < 4; index++) { operation[index] = int.Parse(codes[index]); }
+                        line = reader.ReadLine();
+                        codes = line.Substring(line.IndexOf('[') + 1, line.IndexOf(']') - line.IndexOf('[') - 1).Split(',');
+                        for (int index = 0; index < 4; index++) { after[index] = int.Parse(codes[index]); }
+
+                        opCodeOperations.Add(new OpCodeOperation { Before = before, Operation = operation, After = after});
+                    }
+                    
+                }
+            }
+
+            return opCodeOperations;
+        }
+
         public List<PlantGrowPattern> GetPlantGrowPatterns(string filePath)
         {
             List<PlantGrowPattern> plantGrowPatterns = new List<PlantGrowPattern>();
